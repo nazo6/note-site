@@ -1,13 +1,17 @@
 name: deploy
 
-on: [push]
+on: 
+  push:
+  repository_dispatch:
+      types: [update]
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: read
       deployments: write
-    name: Deploy to Cloudflare Pages
+    name: Build and deploy
     steps:
       - name: Checkout
         uses: actions/checkout@v4
