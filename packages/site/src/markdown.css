@@ -1,0 +1,88 @@
+.article blockquote {
+  @apply mt-4 mb-2 mr-2 whitespace-pre-wrap border-l-4 pl-2;
+  @apply border-gray-300 bg-gray-50 dark:border-gray-500 dark:bg-gray-800;
+}
+
+.article ul {
+  @apply list-disc pl-5;
+}
+
+.article ol {
+  @apply list-decimal pl-5;
+}
+
+.article hr {
+  @apply my-4;
+}
+
+.article thead {
+  @apply bg-gray-50 text-xs uppercase text-gray-700 dark:bg-gray-700 dark:text-gray-400;
+}
+
+.article tr {
+  @apply border-b border-gray-200;
+}
+
+.article code {
+  font-family: Consolas, "Courier New", Courier, monospace;
+}
+
+.article code:not(pre code) {
+  @apply rounded-md bg-gray-300/50 px-1 dark:bg-gray-500/50;
+}
+
+.article h1 {
+  @apply border-b-2 border-gray-500 pt-8 text-3xl font-bold;
+}
+
+.article h2 {
+  @apply pt-8 text-3xl font-semibold;
+}
+
+.article h3 {
+  @apply pt-8 text-2xl font-semibold;
+}
+
+.article h4 {
+  @apply pt-6 text-xl font-semibold;
+}
+
+.article h5 {
+  @apply pt-6 text-xl font-semibold;
+}
+
+.article h6 {
+  @apply pt-6 text-lg font-semibold;
+}
+
+.article .note {
+  @apply border-l-4 pl-4 mt-4;
+}
+
+.article .note div {
+  @apply pt-0;
+}
+
+.article .note code {
+  @apply bg-gray-300;
+}
+
+.article .note.info {
+  @apply bg-blue-100 border-blue-500;
+}
+
+.article .note.warn {
+  @apply bg-yellow-100/30 border-yellow-500 py-4;
+}
+
+.article .note.alert {
+  @apply bg-red-100 border-red-500 py-4;
+}
+
+.article details {
+  @apply pt-4;
+}
+
+.article details div {
+  @apply pt-0;
+}

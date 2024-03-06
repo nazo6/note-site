@@ -1,0 +1,31 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "scripts": {
+    "x": "tsx ./src/index.ts"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/watcher": "^2.4.1",
+    "@types/node": "^20.11.24",
+    "@types/react": "18.2.59",
+    "@types/react-dom": "18.2.19",
+    "@types/serve-handler": "^6.1.4",
+    "@types/yargs": "^17.0.32",
+    "tsx": "^4.7.1"
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.0",
+    "fast-xml-parser": "^4.3.5",
+    "glob": "^10.3.10",
+    "note-site-common": "workspace:*",
+    "note-site-data": "workspace:*",
+    "note-site-markdown": "workspace:*",
+    "playwright": "^1.42.1",
+    "react-dom": "18.3.0-canary-6c3b8dbfe-20240226",
+    "satori": "^0.10.11",
+    "serve-handler": "^6.1.5",
+    "yargs": "^17.7.2",
+    "zx": "^7.2.3"
+  }
+}

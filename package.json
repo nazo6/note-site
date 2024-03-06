@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "x": "cd packages/scripts && pnpm x"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "waku@0.19.4": "patches/waku@0.19.4.patch",
+      "micromark-extension-directive@2.2.1": "patches/micromark-extension-directive@2.2.1.patch"
+    }
+  },
+  "devDependencies": {
+    "wrangler": "2"
+  },
+  "dependencies": {
+    "@biomejs/biome": "^1.5.3"
+  }
+}

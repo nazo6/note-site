@@ -1,0 +1,52 @@
+name: deploy
+
+on: [push]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    name: Deploy to Cloudflare Pages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
+      - name: Cache node_modules
+        id: node_modules
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: nm-${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: nm-${{ runner.os }}
+
+      - name: Cache build temp files
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: .cache
+          key: cache-${{ runner.os }}-${{ github.sha }}
+          restore-keys: cache-${{ runner.os }}
+
+      - name: Build
+        env:
+          GA_MEASUREMENT_ID: ${{ secrets.GA_MEASUREMENT_ID }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          BASE_URL: ${{ vars.BASE_URL }}
+        run: |
+          pnpm install
+          pnpm x data:update
+          pnpm x build
+
+      - name: Publish
+        uses: cloudflare/pages-action@1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: note-site
+          directory: packages/site/dist/public
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,30 @@
+diff --git a/lib/factory-name.js b/lib/factory-name.js
+index 4599862b23fcad95ac6ccc87a35ebca1a86aaa0b..083bbc056f41dd141e15f93e486f619aa7e3c67a 100644
+--- a/lib/factory-name.js
++++ b/lib/factory-name.js
+@@ -29,11 +29,11 @@ export function factoryName(effects, ok, nok, type) {
+ 
+   /** @type {State} */
+   function name(code) {
+-    if (code === 45 || code === 95 || asciiAlphanumeric(code)) {
++    if (code && code !== 10 && code > 0) {
+       effects.consume(code)
+       return name
+     }
+     effects.exit(type)
+-    return self.previous === 45 || self.previous === 95 ? nok(code) : ok(code)
++    return self.previous === 45 || self.previous === 95 || self.previous === 32 ? nok(code) : ok(code)
+   }
+ }
+diff --git a/package.json b/package.json
+index 43ac4e41363a82066fb338ef385bed9eefa83075..0ef29ce297f92a9fedda1a3771bd01b941647690 100644
+--- a/package.json
++++ b/package.json
+@@ -35,7 +35,6 @@
+   ],
+   "exports": {
+     "types": "./index.d.ts",
+-    "development": "./dev/index.js",
+     "default": "./index.js"
+   },
+   "dependencies": {

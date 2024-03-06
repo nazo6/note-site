@@ -1,0 +1,9 @@
+{
+  "name": "note-site-data",
+  "dependencies": {
+    "note-site-common": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24"
+  }
+}
