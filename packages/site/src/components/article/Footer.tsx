@@ -1,6 +1,5 @@
 import { env } from "@/lib/server-env";
 import { TwitterIcon } from "lucide-react";
-import { getEnv } from "waku";
 
 export function ArticleFooter({
   path,

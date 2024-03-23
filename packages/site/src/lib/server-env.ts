@@ -1,4 +1,6 @@
-import { getEnv } from "waku/server";
+function getEnv(name: string): string | undefined {
+  return process.env[name];
+}
 
 type Env =
   | {
@@ -25,8 +27,7 @@ const e = (name: string): string => {
 
 const load = (): Env => {
   const BASE_URL = e("BASE_URL");
-  // @ts-ignore
-  const DEV = import.meta.env.DEV as boolean;
+  const DEV = process.env.NODE_ENV !== "production";
   const PRIVATE = getEnv("MODE") === "private";
   const ANALYTICS_ENABLED = getEnv("ANALYTICS_ENABLED")
     ? getEnv("ANALYTICS_ENABLED") === "true"

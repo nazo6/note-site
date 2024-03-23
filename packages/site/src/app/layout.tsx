@@ -3,7 +3,6 @@ import { TopBar } from "@/components/module/TopBar";
 import { Providers } from "./_components/providers";
 
 import { env } from "@/lib/server-env";
-import RootLayoutClient from "./layoutClient";
 
 import "../globals.css";
 import "../markdown.css";
@@ -13,8 +12,8 @@ function Layout({ children }: { children: React.ReactNode }) {
   return (
     <Providers>
       <div className="min-h-[100vh]">
-        {children}
         <TopBar isPrivate={env.PRIVATE} />
+        {children}
       </div>
     </Providers>
   );
@@ -28,7 +27,6 @@ export default async function RootLayout({
   return (
     <html suppressHydrationWarning lang="ja">
       <body suppressHydrationWarning>
-        <RootLayoutClient />
         <Layout>{children}</Layout>
         {!env.DEV && env.ANALYTICS_ENABLED ? (
           <>

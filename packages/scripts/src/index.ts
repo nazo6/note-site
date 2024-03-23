@@ -19,7 +19,10 @@ async function build() {
   await generateData();
 
   console.log("Building...");
-  await $`pnpm waku build --with-ssr`;
+  await $`pnpm next build`.catch(() => {
+    console.error("Build failed");
+    process.exit(1);
+  });
 
   console.log("Generating og images...");
   await generateOgImage();
@@ -32,7 +35,7 @@ const cmd = yargs(hideBin(process.argv)).scriptName("x");
 
 cmd.command("dev", "start development server", async () => {
   cd(SITE_ROOT);
-  await $`pnpm waku dev --with-ssr`;
+  await $`pnpm next dev --turbo`;
 });
 
 cmd

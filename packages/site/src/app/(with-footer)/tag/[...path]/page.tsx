@@ -15,8 +15,21 @@ const collator = new Intl.Collator(undefined, {
   sensitivity: "base",
 });
 
-export default async function TagPage(props: { path: string[] }) {
-  const path = decodePath(props.path ?? []);
+export async function generateStaticParams() {
+  if (process.env.NODE_ENV === "production") {
+    return tagData.tagList.map((t) => ({
+      path: t,
+    }));
+  }
+  return tagData.tagList.map((t) => ({
+    path: t.map(encodeURI),
+  }));
+}
+
+export default async function TagPage({
+  params,
+}: { params: { path: string[] } }) {
+  const path = decodePath(params.path ?? []);
   const childrenTags = tagData.tagList.filter((tag) => {
     return (
       tag.join("/").startsWith(path.join("/")) &&

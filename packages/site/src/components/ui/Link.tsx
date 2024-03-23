@@ -1,5 +1,5 @@
 import { LucideExternalLink } from "lucide-react";
-import { Link as WakuLink } from "waku";
+import NextLink from "next/link";
 
 export function Link(props: React.ComponentProps<"a"> & { icon?: boolean }) {
   const href = props.href ?? "#";
@@ -19,14 +19,15 @@ export function Link(props: React.ComponentProps<"a"> & { icon?: boolean }) {
         ) : null}
       </a>
     );
-  }if (href.startsWith("/")) {
+  }
+  if (href.startsWith("/")) {
     return (
-      <WakuLink
+      <NextLink
         children={props.children}
         className={props.className}
-        to={href}
+        href={href}
       />
     );
   }
-    return <a {...p} href={href} />;
+  return <a {...p} href={href} />;
 }

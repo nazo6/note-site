@@ -6,12 +6,16 @@ import { ArticleTags } from "@/components/article/Tags";
 import { ArticleTimeInfo } from "@/components/article/TimeInfo";
 import { ArticleTitle } from "@/components/article/Title";
 import { Link } from "@/components/ui/Link";
-import { getPost } from "note-site-data/blog";
+import { blogData, getPost } from "note-site-data/blog";
 import { parseMarkdown } from "@/lib/markdown";
 import { decodePath } from "@/lib/utils";
 
-export default async function BlogArticlePage(props: { slug: string }) {
-  const path = decodePath([props.slug]);
+export async function generateStaticParams() {
+  return blogData.paths.map((p) => ({ path: p }));
+}
+
+export default async function Page({ params }: { params: { path: string[] } }) {
+  const path = decodePath(params.path);
   const entirePath = ["blog", ...path];
   const post = getPost(path);
   const content = await parseMarkdown(post.source, entirePath);

@@ -6,7 +6,6 @@ import clsx from "clsx";
 import { List } from "lucide-react";
 
 import { HeadingsReference } from "note-site-markdown";
-import { useLocation } from "waku/router/client";
 
 ("ml-1");
 ("ml-2");
@@ -16,7 +15,6 @@ import { useLocation } from "waku/router/client";
 ("ml-6");
 
 export function Toc({ headings }: { headings: HeadingsReference }) {
-  const location = useLocation();
   const [active, setActive] = useState<string | null>(null);
   const intersectMap = new Map<string, boolean>();
   headings.forEach((heading) => {
@@ -78,8 +76,7 @@ export function Toc({ headings }: { headings: HeadingsReference }) {
                       active === heading.id,
                   },
                 )}
-                // FIXME: Just setting hash doesn't work because waku automatically inserts base tag.
-                href={`${location.path}#${heading.id}`}
+                href={`#${heading.id}`}
               >
                 {heading.title}
               </a>

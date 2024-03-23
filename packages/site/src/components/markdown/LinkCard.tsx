@@ -40,7 +40,7 @@ const fetchMetadata = async (url: string): Promise<string | null> => {
 const fetchWithCache = async (url: string): Promise<Metadata | null> => {
   const cache = await getCache<Metadata>(`linkcard:${url}`);
   if (cache) {
-    console.log("[LinkCard] Cache hit", url);
+    // console.log("[LinkCard] Cache hit", url);
     return cache;
   }
   console.log("[LinkCard] Cache not hit", url);

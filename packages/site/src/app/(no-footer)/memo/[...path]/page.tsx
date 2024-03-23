@@ -15,8 +15,25 @@ import { Breadcrumbs } from "../_components/Breadcrumbs";
 import { FolderPageTree } from "../_components/FolderPageTree";
 import Meta from "@/components/Meta";
 
-export default async function MemoArticlePage(props: { path: string[] }) {
-  const path = decodePath(props.path ?? []);
+type Props = {
+  params: { path: string[] | null };
+};
+
+export async function generateStaticParams() {
+  // In dev server, nextjs complains if url is not encoded,
+  // but in production, ENAMETOOLONG error occurs if url is encoded.
+  if (process.env.NODE_ENV === "production") {
+    return [...memoData.paths, ...memoData.folderPaths].map((p) => ({
+      path: p,
+    }));
+  }
+  return [...memoData.paths, ...memoData.folderPaths].map((p) => ({
+    path: p.map(encodeURI),
+  }));
+}
+
+export default async function Page({ params }: Props) {
+  const path = decodePath(params.path ?? []);
   const entirePath = ["memo", ...path];
   const post = getPost(path);
   const isIndex = memoData.folderPaths.some(

@@ -6,12 +6,12 @@ import { Link } from "@/components/ui/Link";
 import { ThemeButton } from "@/components/ui/ThemeButton";
 
 import { SearchButton } from "./search/SearchButton";
-import { useLocation } from "waku/router/client";
+import { usePathname } from "next/navigation";
 
 const categories = ["blog", "memo", "tag"];
 export function TopBar({ isPrivate }: { isPrivate: boolean }) {
-  const location = useLocation();
-  const activeCategory = location.path.split("/")[1];
+  const path = usePathname();
+  const activeCategory = path.split("/")[1];
   return (
     <div className="fixed w-full top-0 z-30 flex justify-center backdrop-blur bg-white/70 dark:bg-gray-500/50 drop-shadow-lg">
       <header className="w-article flex h-header items-stretch">
