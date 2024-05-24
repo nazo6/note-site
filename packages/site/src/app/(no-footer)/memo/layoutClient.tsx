@@ -54,7 +54,7 @@ export function LayoutClient({
         </div>
       </div>
       <div
-        className={clsx("fixed w-full xl:sticky xl:w-sidebar pt-header z-30", {
+        className={clsx("fixed w-full xl:sticky xl:w-sidebar pt-header z-20", {
           hidden: mounted && !open,
         })}
       >
