@@ -1,6 +1,6 @@
 "use client";
 
-import TreeView, { INode } from "react-accessible-treeview";
+import TreeView, { INode, ITreeViewProps } from "react-accessible-treeview";
 import { IFlatMetadata } from "react-accessible-treeview/dist/TreeView/utils";
 
 import clsx from "clsx";
@@ -9,10 +9,12 @@ import { FileText, FolderClosed, FolderOpen } from "lucide-react";
 import { Link } from "@/components/ui/Link";
 
 import { NodeMetadata } from "./Tree";
-import { ComponentProps } from "react";
 
 export function TreeViewC(
-  props: Omit<ComponentProps<typeof TreeView>, "nodeRenderer"> & {
+  props: Omit<
+    ITreeViewProps & React.RefAttributes<HTMLUListElement>,
+    "nodeRenderer"
+  > & {
     linkBase: string[];
   },
 ) {
