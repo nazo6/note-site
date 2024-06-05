@@ -33,7 +33,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: packages/site/.next/cache
-          key: build-cache-${{ runner.os }}-${{ github.sha }}
+          key: build-cache-${{ runner.os }}-${{ github.run_id }}
           restore-keys: build-cache-${{ runner.os }}
 
       - name: Build
