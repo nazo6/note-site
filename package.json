@@ -1,10 +1,11 @@
 {
   "scripts": {
-    "x": "cd packages/scripts && pnpm x"
+    "x": "cd packages/scripts && pnpm x",
+    "dev": "pnpm x dev"
   },
   "pnpm": {
     "patchedDependencies": {
-      "micromark-extension-directive@2.2.1": "patches/micromark-extension-directive@2.2.1.patch"
+      "micromark-extension-directive": "patches/micromark-extension-directive.patch"
     }
   },
   "devDependencies": {

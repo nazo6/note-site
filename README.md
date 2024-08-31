@@ -1,7 +1,5 @@
 # note-site
 
-Waku rewrite
-
 ## building
 
 ```

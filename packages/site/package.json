@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "x": "pnpm -w run x",
-    "dev": "pnpm x dev"
+    "dev": "pnpm x dev",
+    "build": "pnpm x build"
   },
   "dependencies": {
     "@vcarl/remark-headings": "^0.1.0",
@@ -16,7 +17,7 @@
     "github-slugger": "^2.0.0",
     "lucide-react": "^0.294.0",
     "next": "^14.2.7",
-    "next-mdx-remote": "^4.4.1",
+    "next-mdx-remote": "^5.0.0",
     "next-themes": "^0.2.1",
     "node-fetch": "^3.3.2",
     "note-site-common": "workspace:*",

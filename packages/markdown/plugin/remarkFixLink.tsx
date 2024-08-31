@@ -1,5 +1,4 @@
 import type { Root } from "mdast";
-import { join } from "node:path";
 import type { Plugin } from "unified";
 import { visit } from "unist-util-visit";
 
