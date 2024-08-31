@@ -1,6 +1,6 @@
-import { BlogData } from "note-site-data/type/blog";
-import { MemoData } from "note-site-data/type/memo";
-import { TagData } from "note-site-data/type/tag";
+import type { BlogData } from "note-site-data/type/blog";
+import type { MemoData } from "note-site-data/type/memo";
+import type { TagData } from "note-site-data/type/tag";
 
 import { writeData } from "../utils";
 

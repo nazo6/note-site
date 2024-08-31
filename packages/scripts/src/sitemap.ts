@@ -1,12 +1,12 @@
-import fs from "fs/promises";
-import path from "path";
+import fs from "node:fs/promises";
+import path from "node:path";
 import {
   BUILT_PUBLIC_DIR,
   DATA_BUILD_METADATA_DIR,
 } from "note-site-common/path";
 
 import { XMLBuilder } from "fast-xml-parser";
-import { PageMeta } from "note-site-common/types/meta";
+import type { PageMeta } from "note-site-common/types/meta";
 
 export default async function generateSitemap() {
   const xmlBuilder = new XMLBuilder({

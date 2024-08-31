@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import clsx from "clsx";
 import { List } from "lucide-react";
 
-import { HeadingsReference } from "note-site-markdown";
+import type { HeadingsReference } from "note-site-markdown";
 
 ("ml-1");
 ("ml-2");

@@ -3,8 +3,8 @@ import { Link } from "@/components/ui/Link";
 import { getPost as getBlogPost } from "note-site-data/blog";
 import { getPost as getMemoPost } from "note-site-data/memo";
 import { tagData } from "note-site-data/tag";
-import { BlogPost } from "note-site-data/type/blog";
-import { MemoPost } from "note-site-data/type/memo";
+import type { BlogPost } from "note-site-data/type/blog";
+import type { MemoPost } from "note-site-data/type/memo";
 import { decodePath, getTitleFromPath } from "@/lib/utils";
 
 import { PostLinkCard, TagLinkCard } from "../_components/Card";

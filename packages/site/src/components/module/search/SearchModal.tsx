@@ -4,12 +4,12 @@ import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
 import clsx from "clsx";
-import Fuse, { FuseResult } from "fuse.js";
+import Fuse, { type FuseResult } from "fuse.js";
 import { SearchIcon, X } from "lucide-react";
 
 import { TagChipLink } from "@/components/ui/TagChip";
 import { searchData } from "note-site-data/search";
-import { SearchData } from "note-site-data/type/search";
+import type { SearchData } from "note-site-data/type/search";
 import { Link } from "@/components/ui/Link";
 
 const fuse = new Fuse(searchData, {

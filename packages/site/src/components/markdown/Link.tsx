@@ -1,4 +1,4 @@
-import React from "react";
+import type React from "react";
 
 import { Link as LinkUi } from "@/components/ui/Link";
 

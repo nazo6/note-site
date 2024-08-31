@@ -1,4 +1,4 @@
-import { compileMDX as compileMdxForTypeRef } from "next-mdx-remote/rsc";
+import type { compileMDX as compileMdxForTypeRef } from "next-mdx-remote/rsc";
 import rehypeKatex from "rehype-katex";
 import rehypeSlug from "rehype-slug";
 import remarkBreaks from "remark-breaks";
@@ -8,7 +8,7 @@ import remarkMath from "remark-math";
 
 import rehypeEmbedKatexCss from "./plugin/rehypeEmbedKatexCss";
 import rehypeExtractHeadings, {
-  HeadingsReference,
+  type HeadingsReference,
 } from "./plugin/rehypeExtractHeadings";
 import { remarkCustomDirective } from "./plugin/remarkCustomDirective";
 // import { remarkFixLink } from "./plugin/remarkFixLink";

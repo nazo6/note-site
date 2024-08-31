@@ -5,7 +5,7 @@ import nodeFetch, { FetchError } from "node-fetch";
 
 import { Link } from "@/components/ui/Link";
 
-import { Metadata, parseMetadata } from "./ogParser";
+import { type Metadata, parseMetadata } from "./ogParser";
 import { getCache, setCache } from "@/lib/server-cache";
 
 const fetchMetadata = async (url: string): Promise<string | null> => {

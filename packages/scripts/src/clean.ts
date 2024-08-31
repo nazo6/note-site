@@ -1,4 +1,4 @@
-import fs from "fs/promises";
+import fs from "node:fs/promises";
 import {
   CACHE_ROOT,
   DATA_JSON_DIR,
@@ -6,7 +6,7 @@ import {
   DIST_DIR,
   PUBLIC_DIR,
 } from "note-site-common/path";
-import path from "path";
+import path from "node:path";
 
 export default async function clean() {
   console.log(`[clean] Deleting ${DATA_ROOT}`);

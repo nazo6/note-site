@@ -1,4 +1,4 @@
-import { HeadingsReference } from "note-site-markdown";
+import type { HeadingsReference } from "note-site-markdown";
 
 import { Toc } from "./Toc";
 

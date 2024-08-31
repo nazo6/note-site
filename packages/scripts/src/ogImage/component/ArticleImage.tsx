@@ -1,5 +1,5 @@
-import { OgImageOptions } from "note-site-common/types/meta";
-import { Assets } from ".";
+import type { OgImageOptions } from "note-site-common/types/meta";
+import type { Assets } from ".";
 
 export function ArticleImage(props: {
   imageOpts: OgImageOptions;

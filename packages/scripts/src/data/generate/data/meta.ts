@@ -1,9 +1,9 @@
-import * as fs from "fs/promises";
-import path from "path";
+import * as fs from "node:fs/promises";
+import path from "node:path";
 
-import { BlogData } from "note-site-data/type/blog";
-import { MemoData } from "note-site-data/type/memo";
-import { MetaData } from "note-site-data/type/meta";
+import type { BlogData } from "note-site-data/type/blog";
+import type { MemoData } from "note-site-data/type/memo";
+import type { MetaData } from "note-site-data/type/meta";
 
 import { ARTICLE_PATH, writeData } from "../utils";
 

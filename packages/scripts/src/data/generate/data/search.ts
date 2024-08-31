@@ -4,9 +4,9 @@ import remarkParse from "remark-parse";
 import remarkStringify from "remark-stringify";
 import { unified } from "unified";
 
-import { BlogData } from "note-site-data/type/blog";
-import { MemoData } from "note-site-data/type/memo";
-import { SearchData } from "note-site-data/type/search";
+import type { BlogData } from "note-site-data/type/blog";
+import type { MemoData } from "note-site-data/type/memo";
+import type { SearchData } from "note-site-data/type/search";
 
 import { writeData } from "../utils";
 

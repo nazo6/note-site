@@ -1,8 +1,8 @@
-import * as fs from "fs/promises";
+import * as fs from "node:fs/promises";
 import { glob } from "glob";
-import * as path from "path";
+import * as path from "node:path";
 
-import { BlogData, BlogPost } from "note-site-data/type/blog";
+import type { BlogData, BlogPost } from "note-site-data/type/blog";
 
 import { extractFrontMatter } from "../extractFrontmatter";
 import { ARTICLE_PATH, writeData } from "../utils";

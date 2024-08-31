@@ -1,6 +1,6 @@
-import { Root } from "mdast";
-import { join } from "path";
-import { Plugin } from "unified";
+import type { Root } from "mdast";
+import { join } from "node:path";
+import type { Plugin } from "unified";
 import { visit } from "unist-util-visit";
 
 // このファイルが存在する理由

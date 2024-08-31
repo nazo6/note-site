@@ -2,10 +2,10 @@
 //
 // This is mainly used in LinkCard component
 
-import fs from "fs/promises";
+import fs from "node:fs/promises";
 import { md5 } from "note-site-common/hash";
 import { CACHE_ROOT } from "note-site-common/path";
-import path from "path";
+import path from "node:path";
 
 function getCachePath(name: string) {
   return path.join(CACHE_ROOT, name);

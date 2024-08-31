@@ -22,11 +22,9 @@ export function Link(props: React.ComponentProps<"a"> & { icon?: boolean }) {
   }
   if (href.startsWith("/")) {
     return (
-      <NextLink
-        children={props.children}
-        className={props.className}
-        href={href}
-      />
+      <NextLink className={props.className} href={href}>
+        {props.children}
+      </NextLink>
     );
   }
   return <a {...p} href={href} />;

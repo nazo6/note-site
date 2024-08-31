@@ -1,1 +1,1 @@
-import * as path from "path";
+import * as path from "node:path";

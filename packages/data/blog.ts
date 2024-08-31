@@ -1,4 +1,4 @@
-import { BlogData, BlogPost } from "./type/blog";
+import type { BlogData, BlogPost } from "./type/blog";
 
 import b from "./json/blog.json";
 

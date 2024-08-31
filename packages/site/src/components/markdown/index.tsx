@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { MDXRemoteProps } from "next-mdx-remote";
+import type { MDXRemoteProps } from "next-mdx-remote";
 
 import { CodeBlock } from "./CodeBlock";
 import { Embed } from "./Embed";

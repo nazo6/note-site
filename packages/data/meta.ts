@@ -1,4 +1,4 @@
-import { MetaData } from "./type/meta";
+import type { MetaData } from "./type/meta";
 
 import m from "./json/meta.json";
 

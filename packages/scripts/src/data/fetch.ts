@@ -1,6 +1,6 @@
-import * as fs from "fs/promises";
-import * as path from "path";
-import { spawn } from "child_process";
+import * as fs from "node:fs/promises";
+import * as path from "node:path";
+import { spawn } from "node:child_process";
 import { DATA_SOURCE_DIR, PUBLIC_DIR } from "note-site-common/path";
 
 const sourceParentDir = path.resolve(DATA_SOURCE_DIR, "..");

@@ -1,4 +1,4 @@
-import { MemoData, MemoPost } from "./type/memo";
+import type { MemoData, MemoPost } from "./type/memo";
 
 import m from "./json/memo.json";
 

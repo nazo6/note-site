@@ -1,4 +1,4 @@
-import { TagData } from "./type/tag";
+import type { TagData } from "./type/tag";
 
 import t from "./json/tag.json";
 

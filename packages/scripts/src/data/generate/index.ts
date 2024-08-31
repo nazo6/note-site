@@ -1,7 +1,7 @@
 import watcher from "@parcel/watcher";
-import { mkdir } from "fs/promises";
-import * as path from "path";
-import { performance } from "perf_hooks";
+import { mkdir } from "node:fs/promises";
+import * as path from "node:path";
+import { performance } from "node:perf_hooks";
 
 import { generateBlogData } from "./data/blog";
 import { generateMemoData } from "./data/memo";

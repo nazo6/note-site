@@ -1,11 +1,11 @@
 import { env } from "@/lib/server-env";
 import { md5 } from "note-site-common/hash";
 
-import fs from "fs/promises";
-import path from "path";
+import fs from "node:fs/promises";
+import path from "node:path";
 
 import { DATA_BUILD_METADATA_DIR } from "note-site-common/path";
-import { PageMeta } from "note-site-common/types/meta";
+import type { PageMeta } from "note-site-common/types/meta";
 
 async function writeMetadata(hash: string, data: PageMeta) {
   if (env.DEV) {

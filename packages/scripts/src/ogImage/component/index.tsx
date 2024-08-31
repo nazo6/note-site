@@ -1,4 +1,4 @@
-import { PageMeta } from "note-site-common/types/meta";
+import type { PageMeta } from "note-site-common/types/meta";
 import ReactDOM from "react-dom/server";
 import { ArticleImage } from "./ArticleImage";
 import { TopImage } from "./TopImage";

@@ -1,6 +1,6 @@
-import * as fs from "fs/promises";
+import * as fs from "node:fs/promises";
 import { DATA_JSON_DIR, DATA_SOURCE_DIR } from "note-site-common/path";
-import * as path from "path";
+import * as path from "node:path";
 
 export const ARTICLE_PATH = path.join(DATA_SOURCE_DIR, "article");
 

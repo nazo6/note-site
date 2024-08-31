@@ -1,14 +1,14 @@
 "use client";
 
-import TreeView, { INode, ITreeViewProps } from "react-accessible-treeview";
-import { IFlatMetadata } from "react-accessible-treeview/dist/TreeView/utils";
+import TreeView, { type INode, type ITreeViewProps } from "react-accessible-treeview";
+import type { IFlatMetadata } from "react-accessible-treeview/dist/TreeView/utils";
 
 import clsx from "clsx";
 import { FileText, FolderClosed, FolderOpen } from "lucide-react";
 
 import { Link } from "@/components/ui/Link";
 
-import { NodeMetadata } from "./Tree";
+import type { NodeMetadata } from "./Tree";
 
 export function TreeViewC(
   props: Omit<

@@ -1,4 +1,4 @@
-import { extname, join } from "path";
+import { extname, join } from "node:path";
 import { visit } from "unist-util-visit";
 
 import { blogData } from "note-site-data/blog";

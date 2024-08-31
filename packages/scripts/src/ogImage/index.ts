@@ -1,8 +1,8 @@
-import fs from "fs/promises";
+import fs from "node:fs/promises";
 import * as playwright from "playwright";
-import path from "path";
+import path from "node:path";
 import serveHandler from "serve-handler";
-import http from "http";
+import http from "node:http";
 import { $ } from "zx";
 
 import {
@@ -12,7 +12,7 @@ import {
   PUBLIC_DIR,
   SCRIPT_ROOT,
 } from "note-site-common/path";
-import { PageMeta } from "note-site-common/types/meta";
+import type { PageMeta } from "note-site-common/types/meta";
 import { generateHtmlStr } from "./component";
 
 const OG_CACHE_DIR = path.join(DATA_BUILD_DIR, "og");

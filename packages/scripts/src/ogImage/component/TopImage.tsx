@@ -1,4 +1,4 @@
-import { Assets } from ".";
+import type { Assets } from ".";
 
 export function TopImage(props: { assets: Assets }) {
   const bg = "linear-gradient(#e66465, #9198e5)";

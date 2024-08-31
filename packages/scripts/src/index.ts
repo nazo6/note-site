@@ -35,7 +35,7 @@ const cmd = yargs(hideBin(process.argv)).scriptName("x");
 
 cmd.command("dev", "start development server", async () => {
   cd(SITE_ROOT);
-  await $`pnpm next dev --turbo`;
+  await $`pnpm next dev`;
 });
 
 cmd

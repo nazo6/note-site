@@ -1,4 +1,4 @@
-import { SearchData } from "./type/search";
+import type { SearchData } from "./type/search";
 
 import s from "./json/search.json";
 

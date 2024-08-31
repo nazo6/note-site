@@ -2,8 +2,8 @@ import { Link } from "@/components/ui/Link";
 import { TagChipLink } from "@/components/ui/TagChip";
 import { getPost as getBlogPost } from "note-site-data/blog";
 import { getPost as getMemoPost } from "note-site-data/memo";
-import { BlogPost } from "note-site-data/type/blog";
-import { MemoPost } from "note-site-data/type/memo";
+import type { BlogPost } from "note-site-data/type/blog";
+import type { MemoPost } from "note-site-data/type/memo";
 
 function pad(n: number) {
   return n > 9 ? n : `0${n}`;
