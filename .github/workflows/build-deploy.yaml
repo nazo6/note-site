@@ -46,11 +46,9 @@ jobs:
           pnpm x data:update
           pnpm x build
 
-      - name: Publish
-        uses: cloudflare/pages-action@1
+      - name: Deploy
+        uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: note-site
-          directory: packages/site/out
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          command: pages deploy ./packages/site/out --project-name=note-site

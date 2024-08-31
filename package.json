@@ -8,7 +8,7 @@
     }
   },
   "devDependencies": {
-    "wrangler": "^2.21.1"
+    "wrangler": "^3.73.0"
   },
   "dependencies": {
     "@biomejs/biome": "^1.8.3"
