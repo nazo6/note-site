@@ -6,10 +6,13 @@ import { useState } from "react";
 export function Image(props: { src?: string }) {
   const [open, setOpen] = useState(false);
 
+  const src = props.src?.startsWith("http") ? props.src : `/${props.src}`;
+
   return (
     <div className="text-center">
       <img
         {...props}
+        src={src}
         alt={props.src}
         className={clsx("cursor-zoom-in inline")}
         onClick={() => {
@@ -27,7 +30,7 @@ export function Image(props: { src?: string }) {
         >
           <img
             className={clsx("m-auto max-w-full max-h-full", "cursor-zoom-out")}
-            src={props.src}
+            src={src}
             alt={props.src}
           />
         </div>
