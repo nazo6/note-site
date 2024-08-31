@@ -4,6 +4,6 @@
     "note-site-common": "workspace:*"
   },
   "devDependencies": {
-    "@types/node": "^20.11.24"
+    "@types/node": "^20.16.2"
   }
 }

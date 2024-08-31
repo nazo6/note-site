@@ -7,23 +7,23 @@
   "license": "ISC",
   "devDependencies": {
     "@parcel/watcher": "^2.4.1",
-    "@types/node": "^20.11.24",
-    "@types/react": "^18.3.0",
+    "@types/node": "^20.16.2",
+    "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
     "@types/serve-handler": "^6.1.4",
-    "@types/yargs": "^17.0.32",
-    "tsx": "^4.7.1"
+    "@types/yargs": "^17.0.33",
+    "tsx": "^4.19.0"
   },
   "dependencies": {
-    "@resvg/resvg-js": "^2.6.0",
-    "fast-xml-parser": "^4.3.5",
-    "glob": "^10.3.10",
+    "@resvg/resvg-js": "^2.6.2",
+    "fast-xml-parser": "^4.4.1",
+    "glob": "^10.4.5",
     "note-site-common": "workspace:*",
     "note-site-data": "workspace:*",
     "note-site-markdown": "workspace:*",
-    "playwright": "^1.42.1",
+    "playwright": "^1.46.1",
     "react-dom": "18.3.1",
-    "satori": "^0.10.11",
+    "satori": "^0.10.14",
     "serve-handler": "^6.1.5",
     "yargs": "^17.7.2",
     "zx": "^7.2.3"
