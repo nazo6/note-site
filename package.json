@@ -1,7 +1,8 @@
 {
   "scripts": {
     "x": "cd packages/scripts && pnpm x",
-    "dev": "pnpm x dev"
+    "dev": "pnpm x dev",
+    "build": "pnpm x build"
   },
   "pnpm": {
     "patchedDependencies": {

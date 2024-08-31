@@ -34,7 +34,9 @@ export default async function fetchData(reclone: boolean) {
       console.log("[fetch-data] GITHUB_TOKEN found");
       clone_url = `https://nazo6:${process.env.GITHUB_TOKEN}@github.com/nazo6/knowledge`;
     } else {
-      console.warn("[fetch-data] token not found");
+      console.warn(
+        "[fetch-data] github token not found. Cloning from internal repo",
+      );
       clone_url = "https://git.n.nazo6.dev/nazo6/knowledge";
     }
 
