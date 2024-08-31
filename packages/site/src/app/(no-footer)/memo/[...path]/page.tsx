@@ -60,6 +60,7 @@ export default async function Page({ params }: Props) {
             tags: post?.frontmatter.tags ?? [],
           },
         }}
+        index={!isIndex}
       />
       {post && content ? (
         <>
