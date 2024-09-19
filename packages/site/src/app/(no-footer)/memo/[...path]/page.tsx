@@ -61,6 +61,8 @@ export default async function Page({ params }: Props) {
           },
         }}
         index={!isIndex}
+        created={post?.frontmatter.created}
+        updated={post?.frontmatter.updated}
       />
       {post && content ? (
         <>

@@ -12,8 +12,8 @@ export type PageMeta = {
   description?: string;
   path: string[];
   index?: boolean;
-  created?: Date;
-  updated?: Date;
+  created?: string;
+  updated?: string;
   canonical?: string;
 };
 

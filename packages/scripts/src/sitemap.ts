@@ -33,12 +33,16 @@ export default async function generateSitemap() {
     xmlBuilder.build({
       urlset: {
         "@@xmlns": "http://www.sitemaps.org/schemas/sitemap/0.9",
-        url: metaList.map((meta) => ({
-          loc: `https://note.nazo6.dev/${meta.path.join("/")}`,
-          lastmod: meta.updated?.toISOString(),
-          changefreq: "monthly",
-          priority: meta.index ? "1.0" : "0.5",
-        })),
+        url: metaList.map((meta) => {
+          return {
+            loc: encodeURI(`https://note.nazo6.dev/${meta.path.join("/")}`),
+            lastmod: meta.updated
+              ? new Date(meta.updated).toISOString()
+              : undefined,
+            changefreq: "monthly",
+            priority: meta.index ? "1.0" : "0.5",
+          };
+        }),
       },
     }),
   );

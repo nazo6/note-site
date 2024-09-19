@@ -33,6 +33,8 @@ export default async function Page({ params }: { params: { path: string[] } }) {
             tags: post.frontmatter.tags ?? [],
           },
         }}
+        created={post?.frontmatter.created}
+        updated={post?.frontmatter.updated}
         canonical={
           post.frontmatter.zenn_published
             ? `https://zenn.dev/nazo6/articles/${path[path.length - 1]}`
