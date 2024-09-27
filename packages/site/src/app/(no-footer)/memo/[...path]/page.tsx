@@ -68,7 +68,7 @@ export default async function Page({ params }: Props) {
         <>
           <Breadcrumbs path={path} />
           <div className="flex flex-col items-center">
-            <ArticleTitle className="decoration-blue-500/30">
+            <ArticleTitle className="decoration-blue-500/30 py-5">
               {!post.frontmatter.published ? <span>🔒</span> : null}
               {post.title}
             </ArticleTitle>
@@ -107,9 +107,9 @@ function IndexPage({ path }: { path: string[] }) {
     <>
       <Breadcrumbs path={path} />
       <ArticleContent>
-        <h1 className="inline-flex items-center gap-1 pb-5 text-2xl font-bold underline decoration-blue-400/50 decoration-[0.3rem] underline-offset-[-1px] [text-decoration-skip-ink:none]">
+        <ArticleTitle className="decoration-blue-500/30 flex gap-2 items-center py-3">
           <FolderOpen />/{path.length === 0 ? "memo" : path.join("/")}
-        </h1>
+        </ArticleTitle>
         <FolderPageTree path={path} />
       </ArticleContent>
     </>

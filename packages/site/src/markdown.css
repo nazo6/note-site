@@ -15,12 +15,16 @@
   @apply my-4;
 }
 
-.article thead {
-  @apply bg-gray-50 text-xs uppercase text-gray-700 dark:bg-gray-700 dark:text-gray-400;
+.article table {
+  @apply border-solid border;
 }
 
-.article tr {
-  @apply border-b border-gray-200;
+.article table th {
+  @apply border py-1 bg-blue-100/50 dark:bg-blue-200/20;
+}
+
+.article table td {
+  @apply border px-1 py-2;
 }
 
 .article code {
@@ -31,20 +35,16 @@
   @apply rounded-md bg-gray-300/50 px-1 dark:bg-gray-500/50;
 }
 
-.article h1 {
-  @apply border-b-2 border-gray-500 pt-8 text-3xl font-bold;
-}
-
 .article h2 {
-  @apply pt-8 text-3xl font-semibold;
+  @apply border-b-2 border-gray-200 dark:border-gray-500 pt-10 pb-2 mb-3 text-3xl font-bold;
 }
 
 .article h3 {
-  @apply pt-8 text-2xl font-semibold;
+  @apply pt-10 mb-2 text-3xl font-semibold;
 }
 
 .article h4 {
-  @apply pt-6 text-xl font-semibold;
+  @apply pt-8 mb-2 text-2xl font-semibold;
 }
 
 .article h5 {
@@ -52,7 +52,7 @@
 }
 
 .article h6 {
-  @apply pt-6 text-lg font-semibold;
+  @apply pt-6 text-xl font-semibold;
 }
 
 .article .note {

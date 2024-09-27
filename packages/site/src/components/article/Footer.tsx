@@ -19,9 +19,10 @@ export function ArticleFooter({
     .join(",")}`;
 
   return (
-    <div>
+    <div className="pb-5">
+      <div className="border-t my-5" />
       <div className="pt-3">
-        <div className="flex gap-2">
+        <div className="flex gap-2 justify-center">
           <a
             href={twitterIntent}
             target="_blank"

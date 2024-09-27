@@ -42,7 +42,7 @@ export default async function Page({ params }: { params: { path: string[] } }) {
         }
       />
       <div className="flex flex-col items-center pb-4 pt-4">
-        <ArticleTitle className="decoration-red-400/50">
+        <ArticleTitle className="decoration-red-400/50 py-5">
           {post.title}
         </ArticleTitle>
         <ArticleTimeInfo

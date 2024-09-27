@@ -25,7 +25,7 @@ export default async function Meta(props: PageMeta) {
   await writeMetadata(pageHash, props);
 
   const title =
-    props.literalTitle === true ? props.title : `${props.title} | nazo6 note`;
+    props.literalTitle === true ? props.title : `${props.title} - nazo6 note`;
 
   const ogImageAvailable =
     props.og?.type === "top" ||

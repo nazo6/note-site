@@ -59,7 +59,7 @@ export function Toc({ headings }: { headings: HeadingsReference }) {
   }, [headings]);
 
   return (
-    <nav className="py-1 bg-article shadow-lg">
+    <nav className="py-1 bg-article shadow-lg overflow-y-auto">
       <h3 className="flex items-center justify-center py-1">
         <List className="mr-2" />
         目次
@@ -70,10 +70,9 @@ export function Toc({ headings }: { headings: HeadingsReference }) {
             <li key={heading.id} className={`ml-${heading.rank * 2} mr-2`}>
               <a
                 className={clsx(
-                  "block w-full pl-2 py-2 border-l-4 border-gray-500/40 hover:bg-gray-500/40",
+                  "block w-full pl-2 py-1 hover:bg-blue-100/40 dark:hover:bg-blue-400/10 text-sm border-y border-dashed",
                   {
-                    "!border-black dark:!border-white bg-gray-400/20":
-                      active === heading.id,
+                    "!bg-blue-300/20": active === heading.id,
                   },
                 )}
                 href={`#${heading.id}`}

@@ -4,6 +4,7 @@ import { ArticleFooter } from "@/components/article/Footer";
 import { ArticleLayout } from "@/components/article/Layout";
 import { metaData } from "note-site-data/meta";
 import { parseMarkdown } from "@/lib/markdown";
+import { ArticleTitle } from "@/components/article/Title";
 
 const post = metaData.specialPages.memo_index;
 
@@ -26,9 +27,9 @@ export default async function MemoIndexPage() {
         }}
       />
       <div className="pt-2">
-        <h1 className="h1 w-full border-b border-black dark:border-white">
+        <ArticleTitle className="decoration-blue-500/30 py-3 text-center">
           Memo
-        </h1>
+        </ArticleTitle>
       </div>
       <ArticleContent>
         {content.content}

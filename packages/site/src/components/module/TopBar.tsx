@@ -15,7 +15,7 @@ export function TopBar({ isPrivate }: { isPrivate: boolean }) {
   return (
     <div className="fixed w-full top-0 z-30 flex justify-center backdrop-blur bg-white/70 dark:bg-gray-500/50 drop-shadow-lg">
       <header className="w-article flex h-header items-stretch">
-        <h1 className="p-0 text-lg md:text-xl flex px-2 items-center justify-start">
+        <p className="p-0 text-lg md:text-xl flex px-2 items-center justify-start">
           <Link href="/" className="hover:underline">
             nazo6{" "}
             <span className={clsx({ "text-red-500": isPrivate })}>note</span>
@@ -31,7 +31,7 @@ export function TopBar({ isPrivate }: { isPrivate: boolean }) {
               </Link>
             </>
           )}
-        </h1>
+        </p>
 
         <div className="ml-auto" />
         <div className="flex h-full">

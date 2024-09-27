@@ -78,7 +78,7 @@ export function LayoutClient({
         </div>
       </div>
       <div className="min-w-0 w-article min-h-[100vh] pt-header flex flex-col">
-        <article className="mb-auto mt-2">{children}</article>
+        <div className="mb-auto mt-2">{children}</div>
         <Footer />
       </div>
     </div>

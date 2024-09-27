@@ -3,6 +3,7 @@ import { blogData, getPost } from "note-site-data/blog";
 
 import { BlogPostCard } from "./_components/BlogPostCard";
 import Meta from "@/components/Meta";
+import { ArticleTitle } from "@/components/article/Title";
 
 function pad(n: number) {
   return n < 10 ? `0${n}` : n;
@@ -40,7 +41,9 @@ export default async function BlogIndexPage() {
           },
         }}
       />
-      <h1 className="h1 py-4">Blog</h1>
+      <ArticleTitle className="decoration-red-400/50 py-5 text-center">
+        Blog
+      </ArticleTitle>
       <div className="bg-content p-2">
         {Array.from(postCategorized).map(([category, paths]) => (
           <div key={category} className="flex flex-col gap-2">

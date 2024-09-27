@@ -32,7 +32,7 @@ export function ThemeButton(props: { className?: string }) {
           )}
         </>
       ) : (
-        <div className="h-[24px] w-[24px]" />
+        <span className="h-[24px] w-[24px] inline-block" />
       )}
     </button>
   );

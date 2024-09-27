@@ -16,8 +16,8 @@ export const components: MDXRemoteProps["components"] = {
   h6: (props) => <Typography {...props} variant="h6" />,
   a: (props) => <Link {...props} href={props.href ?? ""} />,
   table: (props) => (
-    <div className="overflow-x-auto">
-      <table className="my-2 w-full min-w-[450px] table-auto" {...props} />
+    <div className="overflow-x-auto p-1">
+      <table className="my-2 w-full min-w-[450px]" {...props} />
     </div>
   ),
   p: (props) => <div {...props} className={clsx("pt-4", props.className)} />,
