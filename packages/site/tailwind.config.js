@@ -11,7 +11,7 @@ module.exports = {
       spacing: {
         sidebar: "18rem",
         toc: "15rem",
-        header: "3.5rem",
+        header: "3.2rem",
         article: "70rem",
         main: "calc(100vh - 3.5rem)",
       },

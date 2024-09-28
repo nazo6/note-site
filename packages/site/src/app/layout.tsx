@@ -25,8 +25,8 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html suppressHydrationWarning lang="ja">
-      <body suppressHydrationWarning>
+    <html suppressHydrationWarning lang="ja" className="text-[16.5px]">
+      <body suppressHydrationWarning className="dark:bg-[#1B1D21]">
         <Layout>{children}</Layout>
         {!env.DEV && env.ANALYTICS_ENABLED ? (
           <>

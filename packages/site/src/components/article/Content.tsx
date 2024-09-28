@@ -18,7 +18,7 @@ export function ArticleContent({
           </div>
         </div>
       )}
-      <article className="min-w-0 mt-3 flex-grow px-2 pb-2 leading-7 bg-content shadow-lg pt-2">
+      <article className="min-w-0 mt-3 flex-grow lg:px-7 px-3 pb-2 leading-7 bg-content shadow-lg pt-2">
         {children}
       </article>
     </div>

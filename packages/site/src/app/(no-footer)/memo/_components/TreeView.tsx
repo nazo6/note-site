@@ -12,6 +12,7 @@ import { FileText, FolderClosed, FolderOpen } from "lucide-react";
 import { Link } from "@/components/ui/Link";
 
 import type { NodeMetadata } from "./Tree";
+import { usePathname } from "next/navigation";
 
 export function TreeViewC(
   props: Omit<
@@ -21,6 +22,8 @@ export function TreeViewC(
     linkBase: string[];
   },
 ) {
+  const currentPath = usePathname();
+
   const { linkBase, ...p } = props;
   return (
     <TreeView
@@ -39,6 +42,7 @@ export function TreeViewC(
           onClick: handleExpand,
         });
         const path = getElementPath(props.data, element.id);
+        const pathStr = encodeURI(`/${[...props.linkBase, ...path].join("/")}`);
 
         return (
           <div
@@ -59,8 +63,11 @@ export function TreeViewC(
               </button>
             ) : null}
             <Link
-              className="text-sm dark:text-gray-300 text-gray-700 p-1 touch:py-2 hover:bg-gray-500/30 flex-grow rounded-md mr-1"
-              href={encodeURI(`/${[...props.linkBase, ...path].join("/")}`)}
+              className={clsx(
+                "text-sm dark:text-gray-300 text-gray-700 p-1 touch:py-2 hover:bg-gray-500/40 flex-grow rounded-md mr-1",
+                pathStr === currentPath ? "bg-blue-500/30" : "",
+              )}
+              href={pathStr}
             >
               {isBranch ? null : <FileText className="inline h-4" />}
               {metadata.publish === 0 ? "🔒 " : ""}

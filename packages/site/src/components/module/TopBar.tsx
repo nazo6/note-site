@@ -40,9 +40,9 @@ export function TopBar({ isPrivate }: { isPrivate: boolean }) {
               href={`/${category}`}
               key={category}
               className={clsx(
-                "hover:bg-gray-300 dark:hover:bg-gray-800 px-1 md:px-2 h-full flex items-center",
+                "hover:bg-gray-300 dark:hover:bg-gray-800 px-1 md:px-2 h-full flex items-center justify-center w-16",
                 {
-                  "text-black dark:text-white border-b-4 border-b-sky-500 border-t-4 border-t-transparent":
+                  "text-black dark:text-white border-b-4 border-b-sky-500/50 bg-blue-500/10 border-t-4 border-t-transparent":
                     activeCategory === category,
                   "text-gray-500 dark:text-gray-400":
                     activeCategory !== category,

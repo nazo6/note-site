@@ -56,7 +56,7 @@ export default async function Page({ params }: { params: { path: string[] } }) {
       </div>
       <ArticleContent toc={content.headings}>
         {post.frontmatter.published && post.frontmatter.zenn_published && (
-          <div className="flex justify-center m-3 p-1 bg-sky-500/10">
+          <div className="flex justify-center my-3 p-1 bg-sky-500/10">
             この記事は、
             <Link
               href={`https://zenn.dev/nazo6/articles/${path[path.length - 1]}`}
