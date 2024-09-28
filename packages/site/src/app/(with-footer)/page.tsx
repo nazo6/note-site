@@ -1,5 +1,8 @@
 import Meta from "@/components/Meta";
 import { Link } from "@/components/ui/Link";
+import { metaData } from "note-site-data/meta";
+import { parseMarkdown } from "@/lib/markdown";
+import { ArticleTitle } from "@/components/article/Title";
 
 function Card({
   href,
@@ -20,9 +23,10 @@ function Card({
   );
 }
 
-export default function HomePage() {
+export default async function HomePage() {
+  const content = await parseMarkdown(metaData.specialPages.about, ["about"]);
   return (
-    <div className="flex flex-col items-center gap-5 px-3 max-w-article mx-auto pt-6 pb-10">
+    <div className="flex flex-col items-center gap-5 px-3 max-w-article mx-auto pb-10">
       <Meta
         literalTitle
         title={"nazo6 note"}
@@ -31,6 +35,12 @@ export default function HomePage() {
           type: "top",
         }}
       />
+      {content.content}
+
+      <div className="border-t-2 w-full text-center py-2">
+        <ArticleTitle className="decoration-gray-400">コンテンツ</ArticleTitle>
+      </div>
+
       <Card href="/memo" title="/memo" description="あんまり長くない記事" />
       <Card
         href="/blog"
@@ -38,9 +48,6 @@ export default function HomePage() {
         description="ブログ記事。大半はZennにも投稿してます。"
       />
       <Card href="/tag" title="/tag" description="タグ一覧" />
-      <Link href="/about" className="base-card p-2">
-        about
-      </Link>
     </div>
   );
 }

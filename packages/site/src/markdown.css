@@ -76,13 +76,17 @@
 }
 
 .article .note.alert {
-  @apply bg-red-100 border-red-500 py-4;
+  @apply bg-red-100 dark:bg-red-900/50 border-red-500 py-4;
 }
 
 .article details {
-  @apply pt-4;
+  @apply mt-4;
 }
 
-.article details div {
-  @apply pt-0;
+.article details summary {
+  @apply p-2 border border-gray-500/50 hover:bg-blue-200/20 rounded-t-md;
+}
+
+.article details > div {
+  @apply pl-4 pb-4 border-x border-b border-gray-500/50 bg-blue-200/10 rounded-b-md;
 }

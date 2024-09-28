@@ -1,6 +1,9 @@
 "use client";
 
-import TreeView, { type INode, type ITreeViewProps } from "react-accessible-treeview";
+import TreeView, {
+  type INode,
+  type ITreeViewProps,
+} from "react-accessible-treeview";
 import type { IFlatMetadata } from "react-accessible-treeview/dist/TreeView/utils";
 
 import clsx from "clsx";
@@ -57,7 +60,7 @@ export function TreeViewC(
             ) : null}
             <Link
               className="text-sm dark:text-gray-300 text-gray-700 p-1 touch:py-2 hover:bg-gray-500/30 flex-grow rounded-md mr-1"
-              href={`/${[...props.linkBase, ...path].join("/")}`}
+              href={encodeURI(`/${[...props.linkBase, ...path].join("/")}`)}
             >
               {isBranch ? null : <FileText className="inline h-4" />}
               {metadata.publish === 0 ? "🔒 " : ""}

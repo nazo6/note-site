@@ -22,7 +22,7 @@ export function Link(props: React.ComponentProps<"a"> & { icon?: boolean }) {
   }
   if (href.startsWith("/")) {
     return (
-      <NextLink className={props.className} href={encodeURI(href)}>
+      <NextLink className={props.className} href={href}>
         {props.children}
       </NextLink>
     );

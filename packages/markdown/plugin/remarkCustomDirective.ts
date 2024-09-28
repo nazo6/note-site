@@ -50,7 +50,14 @@ export const remarkCustomDirective: Plugin<[], Root> = () => {
                     _mdxExplicitJsx: true,
                   },
                 },
-                ...children,
+                {
+                  type: "mdxJsxFlowElement",
+                  name: "div",
+                  children: [...children],
+                  data: {
+                    _mdxExplicitJsx: true,
+                  },
+                },
               ]
             : children;
           node.data = {
