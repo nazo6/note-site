@@ -8,6 +8,7 @@
     "build": "pnpm x build"
   },
   "dependencies": {
+    "@icons-pack/react-simple-icons": "^10.0.0",
     "@vcarl/remark-headings": "^0.1.0",
     "bright": "^0.8.5",
     "cheerio": "^1.0.0",
