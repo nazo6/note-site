@@ -10,11 +10,8 @@ export function Link(props: React.ComponentProps<"a"> & { icon?: boolean }) {
       <a target="_blank" rel="noopener noreferrer" {...p} href={href}>
         {props.children}
         {icon ? (
-          <span className="inline-flex items-center">
-            <LucideExternalLink
-              size={14}
-              className="inline align-text-bottom"
-            />
+          <span className="inline-flex items-center w-[0.9em] h-[0.9em] align-text-bottom">
+            <LucideExternalLink />
           </span>
         ) : null}
       </a>
