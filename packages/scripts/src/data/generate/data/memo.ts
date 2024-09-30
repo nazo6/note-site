@@ -12,6 +12,7 @@ type MemoFrontmatterRaw = {
   created: string;
   updated: string;
   tags?: string[];
+  description?: string;
 };
 
 export async function generateMemoData() {

@@ -4,8 +4,6 @@ import { FolderOpen } from "lucide-react";
 import { ArticleContent } from "@/components/article/Content";
 import { ArticleFooter } from "@/components/article/Footer";
 import { ArticleLayout } from "@/components/article/Layout";
-import { ArticleTags } from "@/components/article/Tags";
-import { ArticleTimeInfo } from "@/components/article/TimeInfo";
 import { ArticleTitle } from "@/components/article/Title";
 import { getPost, memoData } from "note-site-data/memo";
 import { parseMarkdown } from "@/lib/markdown";
@@ -14,6 +12,7 @@ import { decodePath } from "@/lib/utils";
 import { Breadcrumbs } from "../_components/Breadcrumbs";
 import { FolderPageTree } from "../_components/FolderPageTree";
 import Meta from "@/components/Meta";
+import { ArticleMeta } from "@/components/article/Meta";
 
 type Props = {
   params: { path: string[] | null };
@@ -63,24 +62,19 @@ export default async function Page({ params }: Props) {
         index={!isIndex}
         created={post?.frontmatter.created}
         updated={post?.frontmatter.updated}
+        description={post?.frontmatter.description}
       />
       {post && content ? (
         <>
           <Breadcrumbs path={path} />
-          <div className="flex flex-col items-center">
-            <ArticleTitle className="decoration-blue-500/30 py-5">
-              {!post.frontmatter.published ? <span>🔒</span> : null}
-              {post.title}
-            </ArticleTitle>
-            <ArticleTimeInfo
-              updated={new Date(post.frontmatter.updated)}
-              created={new Date(post.frontmatter.created)}
-            />
-            <ArticleTags
-              tags={post.frontmatter.tags}
-              className="border-blue-500 hover:bg-blue-500/50"
-            />
-          </div>
+          <ArticleTitle className="decoration-blue-500/30 py-5 text-center">
+            {!post.frontmatter.published ? <span>🔒</span> : null}
+            {post.title}
+          </ArticleTitle>
+          <ArticleMeta
+            frontmatter={post.frontmatter}
+            tagClassName="border-blue-500 hover:bg-blue-500/50"
+          />
           <ArticleContent toc={content.headings}>
             {content.content}
             <ArticleFooter

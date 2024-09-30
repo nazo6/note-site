@@ -3,6 +3,7 @@ export type MemoFrontmatter = {
   created: string;
   updated: string;
   tags: string[][];
+  description?: string;
 };
 export type MemoPost = {
   path: string[];

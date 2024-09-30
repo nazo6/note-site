@@ -1,5 +1,6 @@
 export type BlogFrontmatter = {
   published: boolean;
+  description?: string;
   created: string;
   updated: string;
   tags: string[][];

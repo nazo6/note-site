@@ -9,6 +9,7 @@ import { ARTICLE_PATH, writeData } from "../utils";
 
 type BlogFrontmatterRaw = {
   published: boolean;
+  description?: string;
   created: string;
   updated: string;
   slug: string;
