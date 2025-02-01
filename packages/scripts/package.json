@@ -21,7 +21,7 @@
     "note-site-common": "workspace:*",
     "note-site-data": "workspace:*",
     "note-site-markdown": "workspace:*",
-    "playwright": "^1.46.1",
+    "playwright": "^1.50.1",
     "react-dom": "18.3.1",
     "satori": "^0.10.14",
     "serve-handler": "^6.1.5",
