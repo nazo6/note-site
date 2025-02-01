@@ -7,16 +7,12 @@
   "pnpm": {
     "patchedDependencies": {
       "micromark-extension-directive": "patches/micromark-extension-directive.patch"
-    },
-    "overrides": {
-      "@types/react": "19.0.8",
-      "@types/react-dom": "19.0.3"
     }
   },
   "devDependencies": {
-    "wrangler": "^3.73.0"
+    "wrangler": "^3.107.2"
   },
   "dependencies": {
-    "@biomejs/biome": "^1.8.3"
+    "@biomejs/biome": "^1.9.4"
   }
 }
