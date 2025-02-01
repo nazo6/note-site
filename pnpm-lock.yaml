@@ -111,6 +111,9 @@ importers:
       '@types/node':
         specifier: ^20.16.2
         version: 20.16.2
+      '@types/react':
+        specifier: 19.0.8
+        version: 19.0.8
       next-mdx-remote:
         specifier: ^5.0.0
         version: 5.0.0(@types/react@19.0.8)(react@19.0.0)

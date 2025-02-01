@@ -24,6 +24,7 @@
   "devDependencies": {
     "@types/mdast": "^4.0.4",
     "@types/node": "^20.16.2",
+    "@types/react": "19.0.8",
     "next-mdx-remote": "^5.0.0"
   }
 }

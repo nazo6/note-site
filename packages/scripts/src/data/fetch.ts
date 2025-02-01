@@ -27,13 +27,9 @@ export default async function fetchData(reclone: boolean) {
     console.log("[fetch-data] data dir not found. cloning.");
 
     let clone_url: string | null = null;
-    let download_dir: string | null = null;
     if (process.env.GITHUB_TOKEN) {
       console.log("[fetch-data] GITHUB_TOKEN found");
       clone_url = `https://nazo6:${process.env.GITHUB_TOKEN}@github.com/nazo6/knowledge`;
-
-      // in private repo, article is in knowledge folder.
-      download_dir = path.join(sourceParentDir, "knowledge");
     } else {
       if (process.env.GITEA_TOKEN) {
         console.log("[fetch-data] GITEA_TOKEN found");
@@ -44,8 +40,6 @@ export default async function fetchData(reclone: boolean) {
         );
         clone_url = "https://git.n.nazo6.dev/nazo6/knowledge";
       }
-
-      download_dir = sourceParentDir;
     }
 
     if (!clone_url) throw new Error("[fetch-data] clone_url not found");

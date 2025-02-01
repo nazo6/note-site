@@ -30,7 +30,7 @@ export async function parseMarkdown(
   components: Parameters<typeof compileMdxForTypeRef>[0]["components"],
   compileMDX: typeof compileMdxForTypeRef,
 ): Promise<{
-  content: JSX.Element;
+  content: React.ReactElement;
   headings: HeadingsReference;
 }> {
   const processed = await preProcessMd(source, sourcePath);
