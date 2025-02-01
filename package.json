@@ -2,7 +2,9 @@
   "scripts": {
     "x": "cd packages/scripts && pnpm x",
     "dev": "pnpm x dev",
-    "build": "pnpm x build"
+    "build": "pnpm x build",
+    "lint": "biome lint",
+    "type-check": "cd packages/scripts && pnpm --package=typescript dlx tsc --noEmit && cd ../markdown && pnpm --package=typescript dlx tsc --noEmit && cd ../site && pnpm --package=typescript dlx tsc --noEmit"
   },
   "pnpm": {
     "patchedDependencies": {

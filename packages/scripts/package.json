@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@resvg/resvg-js": "^2.6.2",
+    "@vcarl/remark-headings": "^0.1.0",
     "fast-xml-parser": "^4.5.1",
     "glob": "^11.0.1",
     "note-site-common": "workspace:*",
@@ -23,7 +24,11 @@
     "note-site-markdown": "workspace:*",
     "playwright": "^1.50.1",
     "react-dom": "19.0.0",
+    "remark-frontmatter": "^5.0.0",
+    "remark-parse": "^11.0.0",
+    "remark-stringify": "^11.0.0",
     "serve-handler": "^6.1.6",
+    "unified": "^11.0.5",
     "yargs": "^17.7.2",
     "zx": "^8.3.2"
   }
