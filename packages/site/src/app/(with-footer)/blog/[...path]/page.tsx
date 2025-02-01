@@ -13,7 +13,8 @@ export async function generateStaticParams() {
   return blogData.paths.map((p) => ({ path: p }));
 }
 
-export default async function Page({ params }: { params: { path: string[] } }) {
+export default async function Page(props: { params: Promise<{ path: string[] }> }) {
+  const params = await props.params;
   const path = decodePath(params.path);
   const entirePath = ["blog", ...path];
   const post = getPost(path);

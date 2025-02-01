@@ -28,7 +28,7 @@ export const DATA_ROOT = path.resolve(
   SITE_ROOT,
   ".next/cache/custom-12345/data",
 );
-export const DATA_SOURCE_DIR = path.join(DATA_ROOT, "source");
+export const DATA_SOURCE_DIR = path.join(DATA_ROOT, "source/knowledge");
 export const DATA_JSON_DIR = path.join(workspaceRoot, "packages/data/json");
 export const DATA_BUILD_DIR = path.join(DATA_ROOT, "build");
 /// Metadata of each pages

@@ -15,7 +15,7 @@ import Meta from "@/components/Meta";
 import { ArticleMeta } from "@/components/article/Meta";
 
 type Props = {
-  params: { path: string[] | null };
+  params: Promise<{ path: string[] | null }>;
 };
 
 export async function generateStaticParams() {
@@ -31,7 +31,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function Page({ params }: Props) {
+export default async function Page(props: Props) {
+  const params = await props.params;
   const path = decodePath(params.path ?? []);
   const entirePath = ["memo", ...path];
   const post = getPost(path);

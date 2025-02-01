@@ -7,6 +7,10 @@
   "pnpm": {
     "patchedDependencies": {
       "micromark-extension-directive": "patches/micromark-extension-directive.patch"
+    },
+    "overrides": {
+      "@types/react": "19.0.8",
+      "@types/react-dom": "19.0.3"
     }
   },
   "devDependencies": {

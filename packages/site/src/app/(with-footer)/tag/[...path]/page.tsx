@@ -26,9 +26,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function TagPage({
-  params,
-}: { params: { path: string[] } }) {
+export default async function TagPage(props: { params: Promise<{ path: string[] }> }) {
+  const params = await props.params;
   const path = decodePath(params.path ?? []);
   const childrenTags = tagData.tagList.filter((tag) => {
     return (

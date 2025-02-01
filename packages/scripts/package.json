@@ -22,7 +22,7 @@
     "note-site-data": "workspace:*",
     "note-site-markdown": "workspace:*",
     "playwright": "^1.50.1",
-    "react-dom": "18.3.1",
+    "react-dom": "19.0.0",
     "satori": "^0.10.14",
     "serve-handler": "^6.1.5",
     "yargs": "^17.7.2",
