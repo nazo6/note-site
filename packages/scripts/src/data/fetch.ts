@@ -3,7 +3,7 @@ import * as path from "node:path";
 import { spawn } from "node:child_process";
 import { DATA_SOURCE_DIR, PUBLIC_DIR } from "note-site-common/path";
 
-const sourceParentDir = path.resolve(DATA_SOURCE_DIR, "..");
+const sourceParentDir = path.resolve(DATA_SOURCE_DIR, "../..");
 const dataDirName = "source";
 const resourceLinkDir = path.join(PUBLIC_DIR, "resource");
 
