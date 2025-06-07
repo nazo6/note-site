@@ -1,9 +1,9 @@
 name: deploy
 
-on: 
+on:
   push:
   repository_dispatch:
-      types: [update]
+    types: [update]
 
 jobs:
   deploy:
@@ -50,5 +50,4 @@ jobs:
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy ./packages/site/out --project-name=note-site
+          command: deploy --assets ./packages/site/out --name note-site --compatibility-date 2025-06-07

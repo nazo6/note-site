@@ -7,7 +7,7 @@
     "type-check": "cd packages/scripts && pnpm --package=typescript dlx tsc --noEmit && cd ../markdown && pnpm --package=typescript dlx tsc --noEmit && cd ../site && pnpm --package=typescript dlx tsc --noEmit"
   },
   "devDependencies": {
-    "wrangler": "^3.107.2"
+    "wrangler": "^4.19.1"
   },
   "dependencies": {
     "@biomejs/biome": "^1.9.4"
