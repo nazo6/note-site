@@ -6,15 +6,15 @@
     "lint": "biome lint",
     "type-check": "cd packages/scripts && pnpm --package=typescript dlx tsc --noEmit && cd ../markdown && pnpm --package=typescript dlx tsc --noEmit && cd ../site && pnpm --package=typescript dlx tsc --noEmit"
   },
-  "pnpm": {
-    "patchedDependencies": {
-      "micromark-extension-directive": "patches/micromark-extension-directive.patch"
-    }
-  },
   "devDependencies": {
     "wrangler": "^3.107.2"
   },
   "dependencies": {
     "@biomejs/biome": "^1.9.4"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "micromark-extension-directive": "patches/micromark-extension-directive.patch"
+    }
   }
 }

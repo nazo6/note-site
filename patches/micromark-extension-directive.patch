@@ -1,28 +1,26 @@
 diff --git a/lib/factory-name.js b/lib/factory-name.js
-index 27cf46b94809cb1a161a4da2bfa221137c95c9d5..72c988d8eeee8d651b3b58215a5fd85358fed8ac 100644
+index 0d6ccf284f019cb758a0b64fb5e1d25a39a3c5e7..1d5c3bb1128c289169b07f08d46933592c26bab6 100644
 --- a/lib/factory-name.js
 +++ b/lib/factory-name.js
-@@ -26,11 +26,11 @@ export function factoryName(effects, ok, nok, type) {
+@@ -26,9 +26,9 @@ export function factoryName(effects, ok, nok, type) {
  
    /** @type {State} */
    function name(code) {
--    if (code === 45 || code === 95 || asciiAlphanumeric(code)) {
-+    if (code && code !== 10 && code > 0) {
-       effects.consume(code);
-       return name;
+-    if (code === null || markdownLineEnding(code) || unicodeWhitespace(code) || unicodePunctuation(code) && code !== 45 && code !== 95) {
++    if (code === null || markdownLineEnding(code) || unicodePunctuation(code) && code !== 45 && code !== 95) {
+       effects.exit(type);
+-      return self.previous === 45 || self.previous === 95 ? nok(code) : ok(code);
++      return self.previous === 45 || self.previous === 95 || self.previous === 32 ? nok(code) : ok(code);
      }
-     effects.exit(type);
--    return self.previous === 45 || self.previous === 95 ? nok(code) : ok(code);
-+    return self.previous === 45 || self.previous === 95 || self.previous === 32 ? nok(code) : ok(code)
-   }
- }
+     effects.consume(code);
+     return name;
 diff --git a/package.json b/package.json
-index 2725b66483973753c473d47783bfb62d94a251a2..6dd541898b97e7db370004e1d0f522f8b35b3333 100644
+index 68a831665872d19b9a37e16b65e9a11f388457ae..65fdbccf32093d12a2d9b64050a9d49f80c46716 100644
 --- a/package.json
 +++ b/package.json
-@@ -26,7 +26,6 @@
-   "sideEffects": false,
-   "type": "module",
+@@ -28,7 +28,6 @@
+     "xo": "^0.60.0"
+   },
    "exports": {
 -    "development": "./dev/index.js",
      "default": "./index.js"

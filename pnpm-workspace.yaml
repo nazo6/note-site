@@ -1,0 +1,6 @@
+packages:
+  - "packages/common"
+  - "packages/data"
+  - "packages/markdown"
+  - "packages/scripts"
+  - "packages/site"
