@@ -3,9 +3,33 @@ module.exports = {
   darkMode: "class",
   content: ["./src/**/*.{ts,tsx}"],
   theme: {
-    screens: require("./tailwind-screens"),
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1400px",
+    },
     fontFamily: {
       mono: ["BIZ UDGothic", "monospace"],
+      sans: [
+        "Inter",
+        '"Noto Sans JP"',
+        "ui-sans-serif",
+        "system-ui",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        '"Segoe UI"',
+        "Roboto",
+        '"Helvetica Neue"',
+        "Arial",
+        '"Noto Sans"',
+        "sans-serif",
+        '"Apple Color Emoji"',
+        '"Segoe UI Emoji"',
+        '"Segoe UI Symbol"',
+        '"Noto Color Emoji"',
+      ],
     },
     extend: {
       spacing: {

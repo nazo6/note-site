@@ -13,7 +13,7 @@ export function MenuButton({
     <div className={clsx("flex flex-col justify-center", className)}>
       <div className="relative mx-auto sm:max-w-xl">
         <button
-          className="relative h-10 w-10 dark:text-white focus:outline-none"
+          className="relative h-10 w-10 dark:text-white focus:outline-hidden"
           onClick={onClick}
         >
           <span className="sr-only">Open main menu</span>

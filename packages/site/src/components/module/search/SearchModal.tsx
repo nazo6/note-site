@@ -46,7 +46,7 @@ export default function SearchModal({
 
   return createPortal(
     <div
-      className="fixed w-[100vw] h-[100dvh] z-50 top-0 left-0 bg-gray-400/50 flex flex-col items-center p-2 md:p-4 touch:pb-header touch:justify-end"
+      className="fixed w-screen h-dvh z-50 top-0 left-0 bg-gray-400/50 flex flex-col items-center p-2 md:p-4 touch:pb-header touch:justify-end"
       onClick={(e) => {
         e.stopPropagation();
         setShow(false);
@@ -59,7 +59,7 @@ export default function SearchModal({
         }}
       >
         <div className="flex w-full">
-          <div className="relative flex-grow">
+          <div className="relative grow">
             <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
               <SearchIcon />
             </div>

@@ -13,7 +13,7 @@ export function TopBar({ isPrivate }: { isPrivate: boolean }) {
   const path = usePathname();
   const activeCategory = path.split("/")[1];
   return (
-    <div className="fixed w-full top-0 z-30 flex justify-center backdrop-blur bg-cyan-50/30 dark:bg-sky-200/20 drop-shadow-lg">
+    <div className="fixed w-full top-0 z-30 flex justify-center backdrop-blur-sm bg-cyan-50/30 dark:bg-sky-200/20 drop-shadow-lg">
       <header className="w-article flex h-header items-stretch">
         <p className="p-0 text-lg md:text-xl flex px-2 items-center justify-start">
           <Link href="/" className="hover:underline">

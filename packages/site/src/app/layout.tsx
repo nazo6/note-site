@@ -11,7 +11,7 @@ import "nprogress/nprogress.css";
 function Layout({ children }: { children: React.ReactNode }) {
   return (
     <Providers>
-      <div className="min-h-[100vh]">
+      <div className="min-h-screen">
         <TopBar isPrivate={env.PRIVATE} />
         {children}
       </div>
@@ -25,7 +25,11 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html suppressHydrationWarning lang="ja" className="text-[16.5px]">
+    <html
+      suppressHydrationWarning
+      lang="ja"
+      className="text-[16.5px] font-sans"
+    >
       <body suppressHydrationWarning className="dark:bg-[#1B1D21]">
         <Layout>{children}</Layout>
         {!env.DEV && env.ANALYTICS_ENABLED ? (

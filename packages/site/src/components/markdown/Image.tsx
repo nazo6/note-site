@@ -22,7 +22,7 @@ export function Image(props: { src?: string }) {
       {open && (
         <div
           className={clsx(
-            "fixed flex justify-center items-center top-0 left-0 w-full h-full bg-black bg-opacity-80 z-[100] p-3 lg:p-10",
+            "fixed flex justify-center items-center top-0 left-0 w-full h-full bg-black bg-opacity-80 z-100 p-3 lg:p-10",
           )}
           onClick={() => {
             setOpen(false);

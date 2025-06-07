@@ -72,7 +72,7 @@ export function Toc({ headings }: { headings: HeadingsReference }) {
                 className={clsx(
                   "block w-full pl-2 py-1 hover:bg-blue-100/40 dark:hover:bg-blue-400/10 text-sm border-y border-dashed",
                   {
-                    "!bg-blue-300/20": active === heading.id,
+                    "bg-blue-300/20!": active === heading.id,
                   },
                 )}
                 href={`#${heading.id}`}

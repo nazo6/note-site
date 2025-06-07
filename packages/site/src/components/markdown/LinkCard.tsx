@@ -79,12 +79,12 @@ async function LinkCardInner(props: { url: string }) {
       icon={false}
     >
       <div className="col-span-3 row-span-1">
-        <p className="overflow-hidden overflow-ellipsis whitespace-nowrap text-lg">
+        <p className="overflow-hidden text-ellipsis whitespace-nowrap text-lg">
           {title}
         </p>
       </div>
       <div
-        className="col-span-3 row-span-1 text-xs text-gray-800 dark:text-gray-200 overflow-ellipsis overflow-hidden whitespace-nowrap"
+        className="col-span-3 row-span-1 text-xs text-gray-800 dark:text-gray-200 text-ellipsis overflow-hidden whitespace-nowrap"
         title={metadata?.description}
       >
         {metadata?.description}
@@ -115,7 +115,6 @@ export function LinkCard(props: { url: string }) {
     <Suspense
       fallback={
         <Link
-          role="status"
           href={props.url}
           icon={false}
           className="flex flex-col gap-2 rounded-md border-2 border-gray-300/50 hover:bg-gray-500/10 mt-2 p-2 h-28"
