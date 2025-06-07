@@ -32,7 +32,7 @@ export function LayoutClient({
     <div className="h-full flex justify-center md:px-2 px-0">
       <div className="xl:sticky top-header bottom-0 z-50">
         <div className="pt-3" />
-        <div className="fixed bottom-4 left-4 xl:bottom-0 xl:left-0 xl:sticky xl:top-[calc(var(--spacing-header)+0.75rem)] flex xl:flex-col">
+        <div className="fixed bottom-4 left-4 xl:bottom-0 xl:left-0 xl:sticky xl:top-[calc(theme(spacing.header)+0.75rem)] flex xl:flex-col">
           <button
             onClick={() => setOpen(true)}
             className={clsx(
@@ -65,7 +65,7 @@ export function LayoutClient({
               "block!": mounted && open,
               "hidden!": mounted && !open,
             },
-            "z-20 fixed xl:sticky xl:top-header h-[calc(100vh-(var(--spacing-header)))] xl:h-[calc(100vh-(var(--spacing-header))-2rem)] box-border shrink-0",
+            "z-20 fixed xl:sticky xl:top-header h-[calc(100vh-(theme(spacing.header)))] xl:h-[calc(100vh-(theme(spacing.header))-2rem)] box-border shrink-0",
           )}
           onClick={(e) => {
             if (e.target instanceof HTMLAnchorElement && !isXl) {

@@ -1,17 +1,11 @@
 import { useMediaQuery } from "react-responsive";
 
-const getBreakpointSize = (screen: string) => {
-  getComputedStyle(document.documentElement).getPropertyValue(
-    `--breakpoint-${screen}`,
-  );
-};
-
 const screens = {
-  sm: getBreakpointSize("sm"),
-  md: getBreakpointSize("md"),
-  lg: getBreakpointSize("lg"),
-  xl: getBreakpointSize("xl"),
-  "2xl": getBreakpointSize("2xl"),
+  sm: "640px",
+  md: "768px",
+  lg: "1024px",
+  xl: "1280px",
+  "2xl": "1400px",
 };
 
 const breakpoints: Record<string, string> = screens as any;

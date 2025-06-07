@@ -11,7 +11,16 @@ module.exports = {
       "2xl": "1400px",
     },
     fontFamily: {
-      mono: ["BIZ UDGothic", "monospace"],
+      mono: [
+        "ui-monospace",
+        "SFMono-Regular",
+        "Menlo",
+        "Monaco",
+        "Consolas",
+        '"Liberation Mono"',
+        '"Courier New"',
+        "monospace",
+      ],
       sans: [
         "Inter",
         '"Noto Sans JP"',
