@@ -41,18 +41,19 @@ export default async function BlogIndexPage() {
           },
         }}
       />
-      <ArticleTitle className="decoration-red-400/50 py-5 text-center">
-        Blog
+      <ArticleTitle className="decoration-red-400/50 py-12 text-center">
+        ブログ記事一覧
       </ArticleTitle>
-      <div className="bg-content p-2">
+      <div className="bg-content p-2 gap-5 flex flex-col">
         {Array.from(postCategorized).map(([category, paths]) => (
-          <div key={category} className="flex flex-col gap-2">
-            <div className="text-2xl font-bold mt-4">{category}</div>
-            {paths.map((path) => (
-              <div key={path.join("/")}>
-                <BlogPostCard path={path} title={getPost(path).title} />
-              </div>
-            ))}
+          <div key={category} className="flex flex-col gap-5">
+            {paths.map((path) => {
+              return (
+                <div key={path.join("/")}>
+                  <BlogPostCard path={path} post={getPost(path)} />
+                </div>
+              );
+            })}
           </div>
         ))}
       </div>

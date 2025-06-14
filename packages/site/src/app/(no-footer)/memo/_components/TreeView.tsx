@@ -64,7 +64,7 @@ export function TreeViewC(
             ) : null}
             <Link
               className={clsx(
-                "text-sm dark:text-gray-300 text-gray-700 p-1 touch:py-2 hover:bg-gray-500/40 grow rounded-md mr-1",
+                "text-sm border border-transparent dark:text-gray-300 text-gray-700 p-1 touch:py-2 transition-all duration-300 ease-in-out hover:border-black dark:hover:border-white grow mr-1",
                 pathStr === currentPath ? "bg-blue-500/30" : "",
               )}
               href={pathStr}
